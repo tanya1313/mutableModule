@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">app</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello home fragment</string>
+    <string name="hello_second_fragment">Hello second fragment</string>
+    <string name="hello_third_fragment">Hello third fragment</string>
+    <string name="go_to_home_fragment"><![CDATA[< go to home fragment]]></string>
+    <string name="go_to_second_fragment"><![CDATA[go to Second Fragment >]]></string>
+    <string name="go_to_third_fragment"><![CDATA[go to third fragment >]]></string>
+    <string name="third_go_to_second_fragment"><![CDATA[ go to second fragment>]]></string>
+    <string name="third_go_to_feature_1"><![CDATA[go to feature 1 >]]></string>
+</resources>
