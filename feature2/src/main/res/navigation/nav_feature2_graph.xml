@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_feature2_graph"
+    app:startDestination="@id/Feature2FirstFragment">
+
+    <fragment
+        android:id="@+id/Feature2FirstFragment"
+        android:name="com.example.feature2.Feature2FirstFragment"
+        android:label="feature2 first fragment"
+        tools:layout="@layout/feature2_fragment_first">
+        <deepLink
+            android:id="@+id/deep_feature2_first"
+            app:uri="tanyaApp://feature2/firstFragment" />
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/Feature2SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/Feature2SecondFragment"
+        android:name="com.example.feature2.Feature2SecondFragment"
+        android:label="feature2 second fragment"
+        tools:layout="@layout/feature2_fragment_second">
+        <deepLink
+            android:id="@+id/deeplink_feature2_second"
+            app:uri="tanyaApp://feature2/secondFragment" />
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/Feature2FirstFragment" />
+    </fragment>
+</navigation>

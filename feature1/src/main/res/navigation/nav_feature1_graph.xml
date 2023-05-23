@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_feature1_graph"
+    app:startDestination="@id/Feature1FirstFragment">
+
+    <fragment
+        android:id="@+id/Feature1FirstFragment"
+        android:name="com.example.feature1.Feature1FirstFragment"
+        android:label="feature1 first fragment"
+        tools:layout="@layout/feature1_fragment_first">
+
+        <deepLink
+            android:id="@+id/deeplink_f1_first_fragment"
+            app:uri="tanyaApp://feature1/firstFragment" />
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/Feature1SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/Feature1SecondFragment"
+        android:name="com.example.feature1.Feature1SecondFragment"
+        android:label="feature1 second fragment"
+        tools:layout="@layout/feature1_fragment_second">
+
+        <deepLink
+            android:id="@+id/deeplink_f1_second_fragment"
+            app:uri="tanyaApp://feature1/secondFragment/{feature1SecondArgument}" />
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/Feature1FirstFragment" />
+        <argument
+            android:name="feature1SecondArgument"
+            android:defaultValue='"default"'
+            app:argType="string" />
+    </fragment>
+    <activity
+        android:id="@+id/feature1Activity"
+        android:name="com.example.feature1.Feature1Activity"
+        android:label="activity_feature_home"
+        tools:layout="@layout/activity_feature_home">
+    <deepLink
+        android:id="@+id/deepLink_f1_feature1Activity"
+        app:uri="tanyaApp://feature1/feature1Activity" />
+    </activity>
+
+</navigation>

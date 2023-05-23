@@ -1,0 +1,9 @@
+<resources>
+    <string name="title_activity_feature2">Feature2Activity</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="go_to_feature2_second_fragment">go to feature 2 second fragment</string>
+    <string name="go_to_feature_1_second_fragment">go to feature 1 second fragment</string>
+
+</resources>
