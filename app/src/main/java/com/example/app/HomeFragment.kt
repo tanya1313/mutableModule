@@ -1,5 +1,6 @@
 package com.example.app
 
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -45,6 +46,14 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.btnHomeGoToSecond.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_secondFragment)
+        }
+
+        binding.btnAppToF2.setOnClickListener {
+            findNavController().navigate(Uri.parse("tanyaApp://feature2/firstFragment"))
+        }
+
+        binding.btnAppToF1.setOnClickListener {
+            findNavController().navigate(Uri.parse("tanyaApp://feature1/firstFragment"))
         }
     }
 

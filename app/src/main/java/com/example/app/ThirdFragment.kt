@@ -49,9 +49,18 @@ class ThirdFragment : Fragment() {
             findNavController().navigate(R.id.action_thirdFragment_to_secondFragment)
         }
 
-        binding.btnGoToFeature1.setOnClickListener {
+        binding.btnThirdGoToFeature1FirstFragment.setOnClickListener {
             val uri = Uri.parse("tanyaApp://feature1/firstFragment")
             findNavController().navigate(uri)
+        }
+
+        binding.btnThirdGoToFeature1SecondFragment.setOnClickListener {
+            val uri = Uri.parse("tanyaApp://feature1/secondFragment/12345677777")
+            findNavController().navigate(uri)
+        }
+
+        binding.btnAppToF1FeatureActivity.setOnClickListener{
+         findNavController().navigate(Uri.parse("tanyaApp://feature1/feature1Activity"))
         }
     }
 

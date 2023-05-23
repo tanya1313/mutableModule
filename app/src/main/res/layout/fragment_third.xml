@@ -30,14 +30,33 @@
             app:layout_constraintBottom_toBottomOf="parent" />
 
         <Button
-            android:id="@+id/btn_go_to_feature1"
+            android:id="@+id/btn_third_go_to_feature1_first_fragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/third_go_to_feature_1"
+            android:text="@string/third_go_to_feature_1_first_fragment"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" />
+
+        <Button
+            android:id="@+id/btn_third_go_to_feature1_second_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/third_go_to_feature1_second_fragment"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_third_go_to_feature1_first_fragment"
+            android:layout_marginTop="30dp"/>
+
+        <Button
+            android:id="@+id/btn_app_to_f1_featureActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="app to f1 feature1 Activity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_third_go_to_feature1_second_fragment"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

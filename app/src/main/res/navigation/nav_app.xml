@@ -5,14 +5,15 @@
     android:id="@+id/nav_app"
     app:startDestination="@id/homeFragment">
 
-    <include app:graph="@navigation/nav_graph" />
+    <include app:graph="@navigation/nav_feature2_graph" />
 
+    <include app:graph="@navigation/nav_feature1_graph" />
 
 
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.app.HomeFragment"
-        android:label="fragment_home"
+        android:label="app fragment home"
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_secondFragment"
@@ -22,8 +23,12 @@
     <fragment
         android:id="@+id/secondFragment"
         android:name="com.example.app.SecondFragment"
-        android:label="fragment_second"
+        android:label="app fragment second"
         tools:layout="@layout/feature1_fragment_second">
+
+        <deepLink
+            android:id="@+id/deeplink_second_fragment"
+            app:uri="tanyaApp://app/secondFragment"/>
         <action
             android:id="@+id/action_secondFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
@@ -34,8 +39,11 @@
     <fragment
         android:id="@+id/thirdFragment"
         android:name="com.example.app.ThirdFragment"
-        android:label="fragment_third"
+        android:label="app fragment third"
         tools:layout="@layout/fragment_third">
+        <deepLink
+            android:id="@+id/app_third_fragment"
+            app:uri="tanyaApp://app/thirdFragment"/>
         <action
             android:id="@+id/action_thirdFragment_to_secondFragment"
             app:destination="@id/secondFragment" />
@@ -50,5 +58,16 @@
             app:uri="tanyaApp://app/mainActivity" />
 
     </activity>
+
+<!--    其他modules的目的地要寫在其他module的navigration，寫在app會找不到-->
+<!--    <activity-->
+<!--        android:id="@+id/feature2Activity"-->
+<!--        android:name="com.example.feature2.Feature2Activity"-->
+<!--        android:label="Feature2Activity" >-->
+<!--        <deepLink-->
+<!--            android:id="@+id/deep_feature2_Activity"-->
+<!--            app:uri="tanyaApp://feature2/feature2Activity" />-->
+<!--    </activity>-->
+
 
 </navigation>
